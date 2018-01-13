@@ -1,1 +1,3 @@
-## just my vim and tmux config, trying to use vim
+##trying to use vim
+
+###just my vim and tmux config 
