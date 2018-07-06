@@ -1,39 +1,36 @@
 #!/bin/bash
 
 # installation
-brew install nvm
-echo '' >> ~/.bash_profile
-nvm install 8.5
-nvm use 8.5
-
-brew install watchman
-# brew install neovim
-brew install yarn --ignore-dependencies
+echo 'installing tmux'
 brew install tmux
+
+echo 'installing reattach-to-user-namespace'
 brew install reattach-to-user-namespace --with-wrap-pbcopy-and-pbpaste
 
 
 # terminal customizing
+# tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+ln -sfn $PWD/tmux/tmux.conf ~/.tmux.conf
+
+
 # Bash-it
 git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
 ~/.bash_it/install.sh
+source ~/.bash_profile
 
 bash-it enable alias git
 bash-it enable completion git
 bash-it enable plugin tmux
 
 
-# tmux
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-ln -sfn $PWD/tmux/tmux.conf ~/.tmux.conf
-
-
 # themes
 mkdir -p ~/.bash_it/themes/sidigdoyo
-#cp $PWD/bash_it/themes/sidigdoyo/sidigdoyo.themes.bash ~/.bash_it/themes/sidigdoyo/sidigdoyo.themes.bash
-ln -sfn $PWD/bash_it/themes/sidigdoyo/sidigdoyo.themes.bash ~/.bash_it/themes/sidigdoyo/sidigdoyo.themes.bash
+ln -sfn $PWD/bash_it/themes/sidigdoyo/sidigdoyo.theme.bash ~/.bash_it/themes/sidigdoyo/sidigdoyo.theme.bash
+
 
 # neovim
+# brew install neovim
 # mkdir -p ~/.config/nvim/{autoload}
 # ln -sfn $PWD/vim/vimrc ~/.config/nvim/init.vim
 

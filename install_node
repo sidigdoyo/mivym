@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# installation
+echo 'installing nvm'
+brew install nvm
+mkdir ~/.nvm
+echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.bash_profile
+echo '  . "/usr/local/opt/nvm/nvm.sh"' >> ~/.bash_profile
+source ~/.bash_profile
+
+echo 'installing node version 8.5'
+nvm install 8.5
+nvm use 8.5
+
+# echo 'installing watchman'
+# brew install watchman
+
+# echo 'installing yarn'
+# brew install yarn --ignore-dependencies
