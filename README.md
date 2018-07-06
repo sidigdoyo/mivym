@@ -3,7 +3,12 @@ just my vim and tmux config
 
 
 # installation
-running install file
+install term config
 ```bash
 . ./install
+```
+
+install node
+```bash
+. ./install_node
 ```

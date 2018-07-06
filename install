@@ -28,6 +28,7 @@ bash-it enable plugin tmux
 mkdir -p ~/.bash_it/themes/sidigdoyo
 ln -sfn $PWD/bash_it/themes/sidigdoyo/sidigdoyo.theme.bash ~/.bash_it/themes/sidigdoyo/sidigdoyo.theme.bash
 
+git clone https://github.com/dracula/terminal-app.git dracula
 
 # neovim
 # brew install neovim
