@@ -1,17 +1,17 @@
 #!/bin/bash
 
 # installation
-echo 'installing tmux'
-brew install tmux
+# echo 'installing tmux'
+# brew install tmux
 
-echo 'installing reattach-to-user-namespace'
-brew install reattach-to-user-namespace --with-wrap-pbcopy-and-pbpaste
+# echo 'installing reattach-to-user-namespace'
+# brew install reattach-to-user-namespace --with-wrap-pbcopy-and-pbpaste
 
 
 # terminal customizing
 # tmux
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-ln -sfn $PWD/tmux/tmux.conf ~/.tmux.conf
+# git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+# ln -sfn $PWD/tmux/tmux.conf ~/.tmux.conf
 
 
 # Bash-it
@@ -21,14 +21,14 @@ source ~/.bash_profile
 
 bash-it enable alias git
 bash-it enable completion git
-bash-it enable plugin tmux
-
+# bash-it enable plugin tmux
+bash-it enable plugin history-search
 
 # themes
 mkdir -p ~/.bash_it/themes/sidigdoyo
 ln -sfn $PWD/bash_it/themes/sidigdoyo/sidigdoyo.theme.bash ~/.bash_it/themes/sidigdoyo/sidigdoyo.theme.bash
 
-git clone https://github.com/dracula/terminal-app.git dracula
+# git clone https://github.com/dracula/terminal-app.git dracula
 
 # neovim
 # brew install neovim
